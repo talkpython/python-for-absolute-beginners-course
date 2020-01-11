@@ -20,9 +20,9 @@ Examples:
 
 ```python
 x = 7
-Y = 11
+y = 11
 z = x + 2*y 
-Name = 'Sarah'
+name = 'Sarah'
 ```
 
 ### Using built-in libraries
@@ -55,7 +55,8 @@ Data is converted to numerical types using the type name (int, float, etc). Here
 
 ```python
 text = 7.2
-whole_number = int(text) # value = 7
+whole_number = int(text)   # value = 7
+number       = float(text) # value = 7.2
 ```
 
 ## Exercises
@@ -63,7 +64,7 @@ whole_number = int(text) # value = 7
 Now it's your turn. Here are some ideas to practice. 
 
 1. Run the Python REPL and verify you have Python 3.6 or higher.
-2. Create a variable which is a whole number, compute the square and cube root of it.
+2. Create a variable which is a whole number, compute the square and cube of it (i.e. x^2 and x^3, although that is not the Python code needed).
 3. Ask a user for their name and age. Write code to tell them how many years you are older than them (negative numbers for younger is fine at this point).
 4. Use the built-in library `datetime` and the function `datetime.datetime.now()` to determine the current year and print that to REPL using an f-string.
 5. Take one of these sets of code and visualize them with [pythontutor.com](http://pythontutor.com/visualize.html#mode=edit)
