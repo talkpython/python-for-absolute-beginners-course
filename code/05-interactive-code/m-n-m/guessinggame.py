@@ -7,7 +7,7 @@ print("------------------------------")
 print("Guess the number of M&Ms and you get lunch on the house!")
 print()
 
-mm_count = 7  # random.randint(1, 100)
+mm_count = random.randint(1, 100)
 attempt_limit = 5
 attempts = 0
 
