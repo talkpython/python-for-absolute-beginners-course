@@ -3,11 +3,7 @@ import random
 
 def main():
     show_header()
-
-    player = "You"
-    ai = "Computer"
-
-    play_game(player, ai)
+    play_game("You", "Computer")
 
 
 def show_header():
@@ -29,7 +25,16 @@ def play_game(player_1, player_2):
     print(f"{player_1} roll {roll1}")
     print(f"{player_2} rolls {roll2}")
 
-    # Test for a winner
+    winner = check_for_winning_throw(player_1, player_2, roll1, roll2)
+
+    print("The game is over!")
+    if winner is None:
+        print("It was a tie!")
+    else:
+        print(f'{winner} takes the game!')
+
+
+def check_for_winning_throw(player_1, player_2, roll1, roll2):
     # Rock
     #     Rock -> tie
     #     Paper -> lose
@@ -42,9 +47,7 @@ def play_game(player_1, player_2):
     #     Rock -> lose
     #     Paper -> win
     #     Scissors -> tie
-
     winner = None
-
     if roll1 == roll2:
         print("The play was tied!")
     elif roll1 == 'rock':
@@ -62,12 +65,7 @@ def play_game(player_1, player_2):
             winner = player_2
         elif roll2 == 'paper':
             winner = player_1
-
-    print("The game is over!")
-    if winner is None:
-        print("It was a tie!")
-    else:
-        print(f'{winner} takes the game!')
+    return winner
 
 
 def get_roll(player_name, rolls):
