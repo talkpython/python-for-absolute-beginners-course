@@ -17,7 +17,7 @@ def say_hello(name):
     print(f'Nice to meet you {name}') 
 ```
 
-### Function that generate data (return values)
+### Function that generates data (return values)
 
 Functions can also return values to be used later:
 
@@ -36,6 +36,4 @@ say_hello(person)
 
 ## Exercises
 
-Now it's your turn. Here are some ideas to practice. 
-
-1. Your practice exercise is to take the M&M guessing game we created back in chapter 5 (interactive code) and clean it up using functions. Make a copy of the file in this folder called `guessinggame.py`. That's what we started with. There are probably 3-4 functions that you can create to help organize and isolate parts of this application. Use the core concepts above to help. 
+Now it's your turn. Your practice exercise is to **take the M&M guessing game we created back in chapter 5 (interactive code) and clean it up using functions**. Make a copy of the file in this folder called `guessinggame.py`. That's what we started with. There are probably 3-4 functions that you can create to help organize and isolate parts of this application. Use the core concepts above to help. 
