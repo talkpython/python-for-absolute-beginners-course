@@ -54,7 +54,7 @@ Certain operations (like math and string concatenation) require the correct data
 Data is converted to numerical types using the type name (int, float, etc). Here are a few examples:
 
 ```python
-text = 7.2
+text = '7.2'
 whole_number = int(text)   # value = 7
 number       = float(text) # value = 7.2
 ```
