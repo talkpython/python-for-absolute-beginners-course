@@ -48,7 +48,7 @@ else:
 
 ### while loops
 
-When you need to repeat an operation as long as some condition is met, the while` loop is the thing you want.
+When you need to repeat an operation as long as some condition is met, the `while` loop is the thing you want.
 
 ```python
 attempts = 0
