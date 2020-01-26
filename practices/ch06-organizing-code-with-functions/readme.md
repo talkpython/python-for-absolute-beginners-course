@@ -34,6 +34,24 @@ person = get_name()
 say_hello(person)
 ```
 
+### A main method and running "the program"
+
+As we saw, it's a good convention to have an overall organizing function that is what the whole program does at the top of the file. I called this main, for example:
+
+```python
+def main():
+    show_header()
+    get_names()
+    # ... 
+```
+
+And you must remember to run this **at the end** of your program to actually make it execute. We added these two lines as the final of the source file:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
 ## Exercises
 
 Now it's your turn. Your practice exercise is to **take the M&M guessing game we created back in chapter 5 (interactive code) and clean it up using functions**. Make a copy of the file in this folder called `guessinggame.py`. That's what we started with. There are probably 3-4 functions that you can create to help organize and isolate parts of this application. Use the core concepts above to help. 
