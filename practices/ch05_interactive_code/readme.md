@@ -14,13 +14,17 @@ If you have a Python **file**, it can be executed inside PyCharm by simply right
 
 ```bash
 $ python3 program.py
+
+# or 
+
+C:\> python program.py 
 ```
 
 Remember to use either `python` or `python3` based on your system setup. 
 
 ### if / else statements
 
-The essential lesson from this chapter is how code makes decisions to do one thing or another. The first building block are simple **this or that** type of processes. These are done with if statements.
+The essential lesson from this chapter is how code makes decisions to do one thing or another. The first building block are simple **this or that** type of processes. These are done with `if` statements.
 
 ```python
 num = 7
@@ -52,6 +56,21 @@ attempts = 0
 while attempts < 5:
     attempts += 1
     # do whatever you are attempting here...
+```
+
+### Is a number even or odd?
+
+This seems like a simple question to answer but requires a new operation. The modulo operator. This is basically the remainder of a division. For example, 19 / 5 is 3 as a **whole number** (int). But we know that there is a remainder of 4 for whole number math. In Python we express this as:
+
+```python
+div = int(19 / 5)  # <-- 3
+rem = 19 % 5.      # <-- 4
+```
+
+Then we can test whether a number is even if it is evenly divisible by 2 or has a remainder of 0:
+
+```python
+remainder = num % 2  # Is this 0 or 1?
 ```
 
 
