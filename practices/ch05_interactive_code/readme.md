@@ -64,7 +64,7 @@ This seems like a simple question to answer but requires a new operation. The mo
 
 ```python
 div = int(19 / 5)  # <-- 3
-rem = 19 % 5.      # <-- 4
+rem = 19 % 5       # <-- 4
 ```
 
 Then we can test whether a number is even if it is evenly divisible by 2 or has a remainder of 0:
