@@ -1,5 +1,20 @@
 import random
 
+rolls = {
+    'rock': {
+        'defeats': ['scissors'],
+        'defeated_by': ['paper']
+    },
+    'paper': {
+        'defeats': ['rock'],
+        'defeated_by': ['scissors']
+    },
+    'scissors': {
+        'defeats': ['paper'],
+        'defeated_by': ['rock']
+    },
+}
+
 
 def main():
     show_header()
@@ -8,7 +23,8 @@ def main():
 
 def show_header():
     print("---------------------------")
-    print(" Rock Paper Scissors v1")
+    print(" Rock Paper Scissors v2")
+    print(" Data Structures Edition")
     print("---------------------------")
 
 
@@ -17,11 +33,11 @@ def play_game(player_1, player_2):
     wins_p1 = 0
     wins_p2 = 0
 
-    rolls = ['rock', 'paper', 'scissors']
+    roll_names = list(rolls.keys())
 
     while wins_p1 < rounds and wins_p2 < rounds:
-        roll1 = get_roll(player_1, rolls)
-        roll2 = random.choice(rolls)
+        roll1 = get_roll(player_1, roll_names)
+        roll2 = random.choice(roll_names)
 
         if not roll1:
             print("Try again!")
@@ -53,42 +69,22 @@ def play_game(player_1, player_2):
 
 
 def check_for_winning_throw(player_1, player_2, roll1, roll2):
-    # Rock
-    #     Rock -> tie
-    #     Paper -> lose
-    #     Scissors -> win
-    # Paper
-    #     Rock -> win
-    #     Paper -> tie
-    #     Scissors -> lose
-    # Scissors
-    #     Rock -> lose
-    #     Paper -> win
-    #     Scissors -> tie
     winner = None
     if roll1 == roll2:
         print("The play was tied!")
-    elif roll1 == 'rock':
-        if roll2 == 'paper':
-            winner = player_2
-        elif roll2 == 'scissors':
-            winner = player_1
-    elif roll1 == 'paper':
-        if roll2 == 'scissors':
-            winner = player_2
-        elif roll2 == 'rock':
-            winner = player_1
-    elif roll1 == 'scissors':
-        if roll2 == 'rock':
-            winner = player_2
-        elif roll2 == 'paper':
-            winner = player_1
+
+    outcome = rolls.get(roll1, {})
+    if roll2 in outcome.get('defeats'):
+        return player_1
+    elif roll2 in outcome.get('defeated_by'):
+        return player_2
+
     return winner
 
 
-def get_roll(player_name, rolls):
+def get_roll(player_name, roll_names):
     print("Available rolls:")
-    for index, r in enumerate(rolls, start=1):
+    for index, r in enumerate(roll_names, start=1):
         print(f"{index}. {r}")
 
     text = input(f"{player_name}, what is your roll? ")
@@ -98,7 +94,7 @@ def get_roll(player_name, rolls):
         print(f"Sorry {player_name}, {text} is out of bounds!")
         return None
 
-    return rolls[selected_index]
+    return roll_names[selected_index]
 
 
 if __name__ == '__main__':
