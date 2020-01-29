@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+code/07-data-structures/rocks-game/.idea/misc.xml
+code/07-data-structures/simple_dict/.idea/misc.xml
+code/07-data-structures/simple_dict/.idea/modules.xml
+code/07-data-structures/simple_dict/.idea/vcs.xml
+code/07-data-structures/simple_dict/.idea/inspectionProfiles/profiles_settings.xml
