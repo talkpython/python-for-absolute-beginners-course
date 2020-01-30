@@ -1,7 +1,7 @@
 # √ choose the players
 # √ create the board
 # √ choose an initial player
-# until someone wins, check for winner
+# √ until someone wins, check for winner
 #    show the board
 #    choose location, mark it
 #    toggle active player
