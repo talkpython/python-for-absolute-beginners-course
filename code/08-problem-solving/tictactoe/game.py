@@ -22,8 +22,16 @@ def main():
     # CHOOSE INITIAL PLAYER
     active_player_index = 0
     players = ["You", "Computer"]
-    player_symbols = ["X", "O"]
+    symbols = ["X", "O"]
 
+    # UNTIL SOMEONE WINS
+    while not find_winner(board):
+        print("Play a round...")
+
+
+def find_winner(board):
+    # TODO: Implement how we check for a winner!
+    return False
 
 
 if __name__ == '__main__':
