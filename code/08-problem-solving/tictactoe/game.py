@@ -4,9 +4,9 @@
 # √ until someone wins, check for winner
 # √   show the board
 # √   choose location, mark it
-#     toggle active player
+# √   toggle active player
 
-# game over, active player won!
+# √ game over, active player won!
 
 
 def main():
@@ -79,7 +79,39 @@ def announce_turn(player):
 
 
 def find_winner(board):
-    # TODO: Implement how we check for a winner!
+    # Win by rows
+    rows = board
+    for row in rows:
+        symbol1 = row[0]
+        if symbol1 and all(symbol1 == cell for cell in row):
+            return True
+
+    # Win by columns
+    columns = []
+    for col_idx in range(0, 3):
+        col = [
+            board[0][col_idx],
+            board[1][col_idx],
+            board[2][col_idx],
+        ]
+        columns.append(col)
+
+    for col in columns:
+        symbol1 = col[0]
+        if symbol1 and all(symbol1 == cell for cell in col):
+            return True
+
+    # Win by diagonals
+    diagonals = [
+        [board[0][0], board[1][1], board[2][2]],
+        [board[0][2], board[1][1], board[2][0]],
+    ]
+
+    for diag in diagonals:
+        symbol1 = diag[0]
+        if symbol1 and all(symbol1 == cell for cell in diag):
+            return True
+
     return False
 
 
