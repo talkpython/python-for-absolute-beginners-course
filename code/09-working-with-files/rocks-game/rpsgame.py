@@ -1,22 +1,11 @@
 import random
+import json
 
-rolls = {
-    'rock': {
-        'defeats': ['scissors'],
-        'defeated_by': ['paper']
-    },
-    'paper': {
-        'defeats': ['rock'],
-        'defeated_by': ['scissors']
-    },
-    'scissors': {
-        'defeats': ['paper'],
-        'defeated_by': ['rock']
-    },
-}
+rolls = {}
 
 
 def main():
+    load_rolls()
     show_header()
     play_game("You", "Computer")
 
@@ -96,6 +85,18 @@ def get_roll(player_name, roll_names):
         return None
 
     return roll_names[selected_index]
+
+
+def load_rolls():
+    global rolls
+
+    filename = 'rolls.json'
+
+    fin = open(filename, 'r', encoding='utf-8')
+    rolls = json.load(fin)
+    fin.close()
+
+    print(f"Loaded rolls: {list(rolls.keys())}")
 
 
 if __name__ == '__main__':
