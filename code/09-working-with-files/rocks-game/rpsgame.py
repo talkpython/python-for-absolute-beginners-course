@@ -8,6 +8,7 @@ rolls = {}
 def main():
     load_rolls()
     show_header()
+    show_leaderboard()
     player1, player2 = get_players()
     play_game(player1, player2)
 
@@ -17,6 +18,21 @@ def show_header():
     print(" Rock Paper Scissors v2")
     print(" Extensible Rules Edition")
     print("---------------------------")
+
+
+def show_leaderboard():
+    leaders = load_leaders()
+
+    sorted_leaders = list(leaders.items())
+    sorted_leaders.sort(key=lambda l: l[1], reverse=True)
+
+    print()
+    print("---------------------------")
+    print("LEADERS:")
+    for name, wins in sorted_leaders[0:5]:
+        print(f"{wins:,} -- {name}")
+    print("---------------------------")
+    print()
 
 
 def get_players():
