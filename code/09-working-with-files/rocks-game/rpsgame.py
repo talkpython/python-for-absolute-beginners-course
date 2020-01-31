@@ -14,7 +14,7 @@ def main():
 def show_header():
     print("---------------------------")
     print(" Rock Paper Scissors v2")
-    print(" Data Structures Edition")
+    print(" Extensible Rules Edition")
     print("---------------------------")
 
 
