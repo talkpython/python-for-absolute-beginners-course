@@ -2,12 +2,14 @@ import datetime
 import random
 import json
 import os
-import colorama
+
+from colorama import Fore
 
 rolls = {}
 
 
 def main():
+    print(Fore.WHITE)
     log("App starting up...")
 
     load_rolls()
@@ -22,10 +24,12 @@ def main():
 
 
 def show_header():
+    print(Fore.LIGHTMAGENTA_EX)
     print("---------------------------")
-    print(" Rock Paper Scissors v2")
+    print("    Rock Paper Scissors")
     print(" External Libraries Edition")
     print("---------------------------")
+    print(Fore.WHITE)
 
 
 def show_leaderboard():
@@ -51,7 +55,7 @@ def get_players():
 
 
 def play_game(player_1, player_2):
-    log(f"New game starting between {player_1} and {player_2}.")
+    log(Fore.CYAN + f"New game starting between {player_1} and {player_2}.")
 
     wins = {player_1: 0, player_2: 0}
     roll_names = list(rolls.keys())
@@ -61,12 +65,14 @@ def play_game(player_1, player_2):
         roll2 = random.choice(roll_names)
 
         if not roll1:
-            print("Try again!")
+            print(Fore.LIGHTRED_EX + "Try again!")
+            print(Fore.WHITE)
             continue
 
         log(f"Round: {player_1} roll {roll1} and {player_2} rolls {roll2}")
-        print(f"{player_1} roll {roll1}")
-        print(f"{player_2} rolls {roll2}")
+        print(Fore.YELLOW + f"{player_1} rolls {roll1}")
+        print(Fore.LIGHTBLUE_EX + f"{player_2} rolls {roll2}")
+        print(Fore.WHITE)
 
         winner = check_for_winning_throw(player_1, player_2, roll1, roll2)
 
@@ -76,7 +82,8 @@ def play_game(player_1, player_2):
             log(msg)
         else:
             msg = f'{winner} takes the round!'
-            print(msg)
+            fore = Fore.GREEN if winner == player_1 else Fore.LIGHTRED_EX
+            print(fore + msg + Fore.WHITE)
             log(msg)
             wins[winner] += 1
 
@@ -86,8 +93,9 @@ def play_game(player_1, player_2):
         print()
 
     overall_winner = find_winner(wins, wins.keys())
+    fore = Fore.GREEN if overall_winner == player_1 else Fore.LIGHTRED_EX
     msg = f"{overall_winner} wins the game!"
-    print(msg)
+    print(fore + msg + Fore.WHITE)
     log(msg)
     record_win(overall_winner)
 
