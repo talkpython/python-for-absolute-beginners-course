@@ -14,7 +14,7 @@ Remember that the file location when loading files like `the_file.txt` depend on
 
 ```python
 directory = os.path.dirname(__file__)
-filename = os.path.join(directory, 'rolls.json')
+filename = os.path.join(directory, 'the_file.txt')
 # Now filename is a full path
 ```
 
@@ -31,7 +31,7 @@ with open(filename, 'r', encoding='utf-8') as fin:
 
 ### Writing to a file
 
-Writing to a file is similar to reading, it's just about how you open it. Note the **w** for write and **fout** to tell us that it's output not input.
+Writing to a file is similar to reading, it's just about how you open it. Note the **w** for write and **fout** to tell us that it's an output not input file stream.
 
 ```python
 with open(filename, 'w', encoding='utf-8') as fout:
@@ -58,4 +58,4 @@ Now it's your turn. In this practice, go back to the tic tac toe game we created
 
 * Add a leader board (feel free to use JSON like we did).
 * Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it'll change).
-* For extra credit, you can try to use LogBook to improve the logging (but it will require a few concepts we haven't covered yet).
+* For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven't covered yet).
