@@ -23,7 +23,7 @@ def main():
 def show_header():
     print("---------------------------")
     print(" Rock Paper Scissors v2")
-    print(" Extensible Rules Edition")
+    print(" External Libraries Edition")
     print("---------------------------")
 
 
