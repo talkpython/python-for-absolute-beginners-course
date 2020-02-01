@@ -10,7 +10,7 @@ Remember, these are for your own benefit. Feel free to skip them if you don't fi
 
 ### requirements.txt
 
-We working with an application that uses external packages, you need to communicate what packages are required for it to run. We do this with a `requiements.txt` file, here's an example:
+When working with an application that uses external packages, you need to communicate what packages are required for it to run. We do this with a `requiements.txt` file, here is an example:
 
 ```
 colorama
@@ -58,6 +58,6 @@ Now it's your turn. In this practice, go back to the tic tac toe game we created
 
 * Create a virtual environment.
 * Set it as the active python interpreter in PyCharm under `settings > project > project interpreter`.
-* Create a requirements.txt file with colorama as a dependency.
+* Create a requirements.txt file with `colorama` as a dependency.
 * Install the requirements with `pip`.
-* Use colorama to add colored output to your game.
+* Use `colorama` to add colored output to your game.
