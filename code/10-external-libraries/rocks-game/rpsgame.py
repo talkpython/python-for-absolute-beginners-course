@@ -4,6 +4,8 @@ import json
 import os
 
 from colorama import Fore
+from prompt_toolkit import prompt
+from prompt_toolkit.completion import WordCompleter
 
 rolls = {}
 
@@ -124,19 +126,39 @@ def check_for_winning_throw(player_1, player_2, roll1, roll2):
 
 
 def get_roll(player_name, roll_names):
-    print("Available rolls:")
-    for index, r in enumerate(roll_names, start=1):
-        print(f"{index}. {r}")
+    if os.environ.get('PYCHARM_HOSTED') == "1":
+        print(Fore.LIGHTRED_EX + "Warning: Cannot use fancy prompt dialog in PyCharm.")
+        print(Fore.LIGHTRED_EX + "Run this app outside of PyCharm to see it in action.")
+        val = input(Fore.LIGHTYELLOW_EX + "What is your roll: ")
+        print(Fore.WHITE)
+        return val
 
-    text = input(f"{player_name}, what is your roll? ")
-    selected_index = int(text) - 1
+    print(f"Available rolls: {', '.join(roll_names)}.")
 
-    if selected_index < 0 or selected_index >= len(rolls):
-        print(f"Sorry {player_name}, {text} is out of bounds!")
+    word_comp = WordCompleter(roll_names)
+
+    roll = prompt(f"{player_name}, what is your roll: ", completer=word_comp)
+
+    if not roll or roll not in roll_names:
+        print(f"Sorry {player_name}, {roll} not valid!")
         return None
 
-    return roll_names[selected_index]
+    return roll
 
+# def get_roll(player_name, roll_names):
+#     print("Available rolls:")
+#     for index, r in enumerate(roll_names, start=1):
+#         print(f"{index}. {r}")
+#
+#     text = input(f"{player_name}, what is your roll? ")
+#     selected_index = int(text) - 1
+#
+#     if selected_index < 0 or selected_index >= len(rolls):
+#         print(f"Sorry {player_name}, {text} is out of bounds!")
+#         return None
+#
+#     return roll_names[selected_index]
+#
 
 def load_rolls():
     global rolls
