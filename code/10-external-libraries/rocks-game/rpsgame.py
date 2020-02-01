@@ -2,6 +2,7 @@ import datetime
 import random
 import json
 import os
+import colorama
 
 rolls = {}
 
