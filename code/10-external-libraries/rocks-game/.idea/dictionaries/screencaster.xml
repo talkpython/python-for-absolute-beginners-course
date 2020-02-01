@@ -2,6 +2,7 @@
   <dictionary name="screencaster">
     <words>
       <w>colorama</w>
+      <w>darkgreen</w>
     </words>
   </dictionary>
 </component>
