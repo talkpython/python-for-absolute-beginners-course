@@ -10,7 +10,7 @@ Remember, these are for your own benefit. Feel free to skip them if you don't fi
 
 ### try / except
 
-When handling errors, we can check for bad values (e.g. None where a proper string was expected). But Python's native error handling approach is exception-based: throwing and catching exceptions.
+When handling errors, we can check for bad values (e.g. `None` where a proper string was expected). But Python's native error handling approach is exception-based: throwing and catching exceptions.
 
 Below is the minimum code to catch an error in Python.
 
@@ -37,7 +37,7 @@ try:
 except json.decoder.JSONDecodeError:
     # Handle malformed JSON error
 except FileNotFoundError as fe:
-    # Handle malformed JSON error
+    # Handle missing file error
 except ValueError:
     # Handle conversion error.
 except Exception as x:
@@ -51,4 +51,4 @@ except Exception as x:
 Now it's your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
 
 * Add error handling around the input processing in your program using try / except. Be as specific on the errors as possible. If you can determine the cause or type of error, give a specific message.
-* Think of all other ways your app could crash or run into trouble. Get it to crash, check the error type in the traceback, and add the appropriate error handling for this as well.
+* Think of all other ways your app could crash or run into trouble. Get it to crash, check the error type in the traceback, and add the appropriate error handling for this as well.
