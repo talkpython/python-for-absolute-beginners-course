@@ -9,5 +9,5 @@
 * [Chapter 8: Problem solving](ch08_problem_solving/readme.md)
 * [Chapter 9: Working with files](ch09_working_with_files/readme.md)
 * [Chapter 10: External libraries](ch10_external_libraries/readme.md)
-
+* [Chapter 11: Error handling](ch11-error-handling/readme.md)
 
