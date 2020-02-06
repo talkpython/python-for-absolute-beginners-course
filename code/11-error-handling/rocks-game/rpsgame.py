@@ -4,25 +4,37 @@ import json
 import os
 
 from colorama import Fore
-from prompt_toolkit import prompt
-from prompt_toolkit.completion import WordCompleter, Completer, Completion
 
 rolls = {}
 
 
 def main():
-    print(Fore.WHITE)
-    log("App starting up...")
+    try:
+        print(Fore.WHITE)
+        log("App starting up...")
 
-    show_header()
-    load_rolls()
-    show_leaderboard()
+        show_header()
+        load_rolls()
+        show_leaderboard()
 
-    player1, player2 = get_players()
-    log(f"{player1} has logged in.")
+        player1, player2 = get_players()
+        log(f"{player1} has logged in.")
 
-    play_game(player1, player2)
-    log("Game over.")
+        play_game(player1, player2)
+        log("Game over.")
+    except json.decoder.JSONDecodeError as je:
+        print()
+        print(Fore.LIGHTRED_EX + "ERROR: The file rolls.json is invalid JSON." + Fore.WHITE)
+        print(Fore.LIGHTRED_EX + f"ERROR: {je}" + Fore.WHITE)
+    except FileNotFoundError as fe:
+        print()
+        print(Fore.LIGHTRED_EX + "ERROR: Rolls file not found" + Fore.WHITE)
+        print(Fore.LIGHTRED_EX + f"ERROR: {fe}" + Fore.WHITE)
+    except KeyboardInterrupt:
+        print()
+        print(Fore.LIGHTCYAN_EX + "You gotta run? Ok, cya next time!" + Fore.WHITE)
+    except Exception as x:
+        print(Fore.LIGHTRED_EX + f"Unknown error: {x}" + Fore.WHITE)
 
 
 def show_header():
