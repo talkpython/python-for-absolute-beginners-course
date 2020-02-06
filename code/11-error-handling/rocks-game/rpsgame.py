@@ -29,7 +29,7 @@ def show_header():
     print(Fore.LIGHTMAGENTA_EX)
     print("---------------------------")
     print("    Rock Paper Scissors")
-    print(" External Libraries Edition")
+    print("   Error Handling Edition")
     print("---------------------------")
     print(Fore.WHITE)
 
@@ -119,25 +119,33 @@ def check_for_winning_throw(player_1, player_2, roll1, roll2):
     outcome = rolls.get(roll1, {})
     if roll2 in outcome.get('defeats'):
         return player_1
-    elif roll2 in outcome.get('loses'):
+    elif roll2 in outcome.get('defeated_by'):
         return player_2
 
     return winner
 
 
 def get_roll(player_name, roll_names):
-    print("Available rolls:")
-    for index, r in enumerate(roll_names, start=1):
-        print(f"{index}. {r}")
+    try:
+        print("Available rolls:")
+        for index, r in enumerate(roll_names, start=1):
+            print(f"{index}. {r}")
 
-    text = input(f"{player_name}, what is your roll? ")
-    selected_index = int(text) - 1
+        text = input(f"{player_name}, what is your roll? ")
+        if text is None or not text.strip():
+            print("You must enter response")
+            return None
 
-    if selected_index < 0 or selected_index >= len(roll_names):
-        print(f"Sorry {player_name}, {text} is out of bounds!")
+        selected_index = int(text) - 1
+
+        if selected_index < 0 or selected_index >= len(roll_names):
+            print(f"Sorry {player_name}, {text} is out of bounds!")
+            return None
+
+        return roll_names[selected_index]
+    except ValueError as ve:
+        print(Fore.RED + f"Could not convert to integer: {ve}" + Fore.WHITE)
         return None
-
-    return roll_names[selected_index]
 
 
 def load_rolls():
