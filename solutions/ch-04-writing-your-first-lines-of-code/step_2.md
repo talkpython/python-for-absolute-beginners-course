@@ -8,7 +8,7 @@
 >>> cube = num * num * num
 >>> cube
 64
->>> # Another way to do this
+>>> # A better way to do this
 >>> num ** 2
 16
 >>> num ** 3
