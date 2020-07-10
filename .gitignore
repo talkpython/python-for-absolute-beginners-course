@@ -122,3 +122,11 @@ code/09-working-with-files/.idea/vagrant.xml
 code/09-working-with-files/.idea/vcs.xml
 code/09-working-with-files/.idea/inspectionProfiles/profiles_settings.xml
 misc.xml
+.idea/$CACHE_FILE$
+.idea/beginners-course.iml
+.idea/modules.xml
+.idea/vagrant.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
