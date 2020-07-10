@@ -20,3 +20,12 @@ print(d['rolls'], "\t# <- outputs ['rock', 'paper', 'scissors']?")
 print(d.get('Sarah'), "\t\t\t\t\t\t\t# <- outputs None?")
 print(d.get('Jeff', -1), "\t\t\t\t\t\t\t\t# <- outputs -1?")
 print(d['done'], "\t\t\t\t\t\t\t# <- outputs True?")
+
+####################################################################
+# Output when running this:
+#
+# 7 								# <- outputs 7?
+# ['rock', 'paper', 'scissors'] 	# <- outputs ['rock', 'paper', 'scissors']?
+# None 							    # <- outputs None?
+# -1 								# <- outputs -1?
+# True 							    # <- outputs True?
