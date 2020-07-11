@@ -1,0 +1,60 @@
+## Solution for Connect4
+
+This one is VERY similar to TIC-TAC-TOE. There are two fundamental changes, other
+than this, it's the same code for both games.
+
+### Change 1: Board data structure.
+
+We are using this data structure. Tic-Tac-Toe was 3x3. Connect4 is 7x6 (7 columns, 6 rows):
+
+```python
+# Board is a list of rows
+# Rows are a list of cells
+board = [
+    # 6 rows
+    [None, None, None, None, None, None, None],  # 7 columns per row
+    [None, None, None, None, None, None, None],  # 7 columns per row
+    [None, None, None, None, None, None, None],  # 7 columns per row
+    [None, None, None, None, None, None, None],  # 7 columns per row
+    [None, None, None, None, None, None, None],  # 7 columns per row
+    [None, None, None, None, None, None, None],  # 7 columns per row
+]
+```
+
+The second major change is finding wins. In Tic-Tac-Toe, we wrote a function called:
+
+```python
+def get_winning_sequences(board):
+    ...
+```
+
+This function would turn rows, columns, and diagonals into just straight lists. Then
+they are super simple to check. Are all of them one of the same kind and not empty?
+For example, is a diagonal all X's? Then X's win.
+
+It's identical in connect 4. But finding these is a bit of a pain. You don't have to have 
+the whole row, or column, or diagonal the same to win. You just need 4 in a row of these.
+
+So we wrote a function called `def find_sequences_of_four_cells_in_a_row(cells)`. It
+takes a series of say, 7 items, then returns all consecutive possibilities of 4.
+
+For example:
+
+```python
+cells = [1, 2, 3, 4, 5, 6]
+fours = find_sequences_of_four_cells_in_a_row(cells)
+# fours = [
+#    [1, 2, 3, 4], 
+#    [2, 3, 4, 5], 
+#    [3, 4, 5, 6]
+#]
+```
+
+Then we can just return these out of `get_winning_sequences()` and it'll see if any are winners.
+
+Finding the sequences is a bit more complex, but it's the same idea. Find all possible diagonals,
+rows, and columns, use `find_sequences_of_four_cells_in_a_row()` to find the lists of 4 and check them.
+
+That's the game.
+
+See [connect4.py](./connect4.py)
