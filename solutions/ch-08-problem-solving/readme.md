@@ -34,11 +34,11 @@ This function would turn rows, columns, and diagonals into just straight lists. 
 they are super simple to check. Are all of them one of the same kind and not empty?
 For example, is a diagonal all X's? Then X's win.
 
-It's identical in connect 4. But finding these is a bit of a pain. You don't have to have 
+It's identical in connect 4. But finding these are a bit of a pain. You don't have to have 
 the whole row, or column, or diagonal the same to win. You just need 4 in a row of these.
 
-So we wrote a function called `def find_sequences_of_four_cells_in_a_row(cells)`. It
-takes a series of say, 7 items, then returns all consecutive possibilities of 4.
+So we wrote a function called `find_sequences_of_four_cells_in_a_row(cells)`. It
+takes a series of items, say 7 items, then returns all consecutive possibilities of 4.
 
 For example:
 
@@ -52,7 +52,8 @@ fours = find_sequences_of_four_cells_in_a_row(cells)
 #]
 ```
 
-Then we can just return these out of `get_winning_sequences()` and it'll see if any are winners.
+Then we can just return these out of `get_winning_sequences()` and it'll see if any are winners. 
+At that point, it's all the same as Tic-Tac-Toe. If they are all one type, that type is the winner.
 
 Finding the sequences is a bit more complex, but it's the same idea. Find all possible diagonals,
 rows, and columns, use `find_sequences_of_four_cells_in_a_row()` to find the lists of 4 and check them.
