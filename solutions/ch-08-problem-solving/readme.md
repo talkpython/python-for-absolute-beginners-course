@@ -21,6 +21,8 @@ board = [
 ]
 ```
 
+### Change 2: Finding lists of 4 in the rows, cols, and diagonals
+
 The second major change is finding wins. In Tic-Tac-Toe, we wrote a function called:
 
 ```python
