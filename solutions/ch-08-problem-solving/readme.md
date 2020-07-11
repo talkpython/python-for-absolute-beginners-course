@@ -1,6 +1,6 @@
 ## Solution for Connect4
 
-This one is VERY similar to TIC-TAC-TOE. There are two fundamental changes, other
+This one is VERY similar to TIC-TAC-TOE. There are three fundamental changes, other
 than this, it's the same code for both games.
 
 ### Change 1: Board data structure.
@@ -21,9 +21,16 @@ board = [
 ]
 ```
 
-### Change 2: Finding lists of 4 in the rows, cols, and diagonals
+### Change 2: You pick a column, drop the disk, it falls down
 
-The second major change is finding wins. In Tic-Tac-Toe, we wrote a function called:
+The second major change is how you pick where to play.
+
+In Tic-Tac-Toe, it's choose the square. In Connect 4, it's choose the column,
+drop the disk it fall as far as it can. We rewrote `choose_location()` accordingly.
+
+### Change 3: Finding lists of 4 in the rows, cols, and diagonals
+
+The final major change is finding wins. In Tic-Tac-Toe, we wrote a function called:
 
 ```python
 def get_winning_sequences(board):
