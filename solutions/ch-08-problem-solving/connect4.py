@@ -1,4 +1,4 @@
-from pprint import pprint
+import random
 from typing import List
 
 
@@ -13,11 +13,11 @@ def main():
     board = [
         # 6 rows
         [None, None, None, None, None, None, None],  # 7 columns per row
-        [None, None, None, None, None, None, None],  # 7 columns per row
-        [None, None, None, None, None, None, None],  # 7 columns per row
-        [None, None, None, None, None, None, None],  # 7 columns per row
-        [None, None, None, None, None, None, None],  # 7 columns per row
-        [None, None, None, None, None, None, None],  # 7 columns per row
+        [None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, None],
+        [None, None, None, None, None, None, None],
     ]
 
     # CHOOSE INITIAL PLAYER
@@ -28,7 +28,8 @@ def main():
     active_player_index = 0
     player_name = input("What is your name player 1? ")
     players = [player_name.capitalize(), "Computer"]
-    print(f"Welcome {players[0]}, your symbol will be {symbols[0]}.")
+    print(f"Welcome {players[0]}")
+    print(f"Your symbol will be {symbols[0]}.")
     print(f"{players[1]}, will be {symbols[1]}.")
     player = players[active_player_index]
 
@@ -40,7 +41,7 @@ def main():
 
         announce_turn(player)
         show_board(board)
-        if not choose_location(board, symbol):
+        if not choose_location(board, symbol, active_player_index == 1):
             print("That isn't an option, try again.")
             continue
 
@@ -48,14 +49,19 @@ def main():
         active_player_index = (active_player_index + 1) % len(players)
 
     print()
-    print(f"GAME OVER! {player} has won with the board: ")
+    print(f"GAME OVER! {player} ({symbol}) has won with the board: ")
     show_board(board)
     print()
 
 
-def choose_location(board, symbol):
-    row = int(input("Choose which row: "))
-    column = int(input("Choose which column: "))
+def choose_location(board, symbol, is_computer):
+    if not is_computer:
+        row = int(input("Choose which row: "))
+        column = int(input("Choose which column: "))
+    else:
+        row = random.randint(1, len(board))
+        column = random.randint(1, len(board[0]))
+        print(f"Computer chooses ({row}, {column})")
 
     row -= 1
     column -= 1
@@ -73,10 +79,11 @@ def choose_location(board, symbol):
 
 
 def show_board(board):
-    for row in board:
+    for row_idx, row in enumerate(board, start=1):
         print("| ", end='')
-        for cell in row:
-            symbol = cell if cell is not None else "💿"
+        for col_idx, cell in enumerate(row, start=1):
+            empty_text = f"({row_idx}, {col_idx})"
+            symbol = f'  {cell}   ' if cell is not None else empty_text
             print(symbol, end=" | ")
         print()
 
@@ -108,7 +115,7 @@ def get_winning_sequences(board):
         fours_across = find_sequences_of_four_cells_in_a_row(row)
         sequences.extend(fours_across)
 
-    # Win by columns, get all columns as in
+    # Win by columns
     for col_idx in range(0, 7):
         col = [
             board[0][col_idx],
@@ -118,15 +125,61 @@ def get_winning_sequences(board):
             board[4][col_idx],
             board[5][col_idx],
         ]
+        # Go through each column and get any consecutive sequence of 4 cells
         fours_down = find_sequences_of_four_cells_in_a_row(col)
         sequences.extend(fours_down)
 
     # Win by diagonals
+    # In Tic-Tac-Toe, we just had two diagonals and they were easy to compute.
+    # It's pretty simple here too, but more, so just a bit more to type out
+    # for the possible options.
+    #
+    # To help visualize this, here is the board with indices: (row,col)
+    # [
+    #     ['(0,0)', '(0,1)', '(0,2)', '(0,3)', '(0,4)', '(0,5)', '(0,6)'],
+    #     ['(1,0)', '(1,1)', '(1,2)', '(1,3)', '(1,4)', '(1,5)', '(1,6)'],
+    #     ['(2,0)', '(2,1)', '(2,2)', '(2,3)', '(2,4)', '(2,5)', '(2,6)'],
+    #     ['(3,0)', '(3,1)', '(3,2)', '(3,3)', '(3,4)', '(3,5)', '(3,6)'],
+    #     ['(4,0)', '(4,1)', '(4,2)', '(4,3)', '(4,4)', '(4,5)', '(4,6)'],
+    #     ['(5,0)', '(5,1)', '(5,2)', '(5,3)', '(5,4)', '(5,5)', '(5,6)'],
+    #     ]
+    #
+    # I'm sure there a clever double for i in range(0, rows) & for j in range(0, cols)
+    # solution. But I'm afraid it will be too confusing for lots of us.
+    # So I'll just do it long-hand down here.
     diagonals = [
-        [board[0][0], board[1][1], board[2][2]],
-        [board[0][2], board[1][1], board[2][0]],
+
+        # Down to the right diagonals
+        [board[5][0]],  # Not really used, too short, but here for building the pattern
+        [board[4][0], board[5][1]],  # Not really used, too short, but here for building the pattern
+        [board[3][0], board[4][1], board[5][2]],  # Not really used, too short, but here for building the pattern
+        [board[2][0], board[3][1], board[4][2], board[5][3]],
+        [board[1][0], board[2][1], board[3][2], board[4][3], board[5][4]],
+        [board[0][0], board[1][1], board[2][2], board[3][3], board[4][4], board[5][5]],
+        [board[0][1], board[1][2], board[2][3], board[3][4], board[4][5], board[5][6]],
+        [board[0][2], board[1][3], board[2][4], board[3][5], board[4][6]],
+        [board[0][3], board[1][4], board[2][5], board[3][6]],
+        [board[0][4], board[1][5], board[2][6]],  # Not really used, too short, but here for building the pattern
+        [board[0][5], board[1][6]],  # Not really used, too short, but here for building the pattern
+        [board[0][6]],  # Not really used, too short, but here for building the pattern
+
+        # Down to the left diagonals
+        [board[0][0]],  # Not really used, too short, but here for building the pattern
+        [board[0][1], board[1][0]],  # Not really used, too short, but here for building the pattern
+        [board[2][0], board[1][1], board[0][2]],  # Not really used, too short, but here for building the pattern
+        [board[0][3], board[1][2], board[2][1], board[3][0]],
+        [board[0][4], board[1][3], board[2][2], board[3][1], board[4][0]],
+        [board[0][5], board[1][4], board[2][3], board[3][2], board[4][1], board[5][0]],
+        [board[0][6], board[1][5], board[2][4], board[3][3], board[4][2], board[5][1]],
+        [board[1][6], board[2][5], board[3][4], board[4][3], board[5][2]],
+        [board[2][6], board[3][5], board[4][4], board[5][3]],
+        [board[3][6], board[4][5], board[5][4]],  # Not really used, too short, but here for building the pattern
+        [board[4][6], board[5][5]],  # Not really used, too short, but here for building the pattern
+        [board[5][6]],  # Not really used, too short, but here for building the pattern
     ]
-    sequences.extend(diagonals)
+    for diag in diagonals:
+        fours_diagonals = find_sequences_of_four_cells_in_a_row(diag)
+        sequences.extend(fours_diagonals)
 
     return sequences
 
