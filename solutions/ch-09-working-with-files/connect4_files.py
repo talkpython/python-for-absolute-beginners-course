@@ -1,3 +1,5 @@
+import json
+import os
 import random
 from typing import List, Optional
 
@@ -6,6 +8,7 @@ def main():
     print()
     print("Welcome to TIC TAC TOE from TALK PYTHON")
     print()
+    show_leaderboard()
 
     # CREATE THE BOARD:
     # Board is a list of rows
@@ -31,8 +34,8 @@ def main():
     print(f"Welcome {players[0]}")
     print(f"Your symbol will be {symbols[0]}.")
     print(f"{players[1]}, will be {symbols[1]}.")
-    player = players[active_player_index]
     symbol = symbols[active_player_index]
+    player = players[active_player_index]
 
     # UNTIL SOMEONE WINS
     while not find_winner(board):
@@ -52,6 +55,7 @@ def main():
     print()
     print(f"GAME OVER! {player} ({symbol}) has won with the board: ")
     show_board(board)
+    record_win(player)
     print()
 
 
@@ -206,6 +210,47 @@ def find_sequences_of_four_cells_in_a_row(cells: List[str]) -> List[List[str]]:
             sequences.append(candidate)
 
     return sequences
+
+
+def show_leaderboard():
+    leaders = load_leaders()
+
+    sorted_leaders = list(leaders.items())
+    sorted_leaders.sort(key=lambda l: l[1], reverse=True)
+
+    print()
+    print("---------------------------")
+    print("LEADERS:")
+    for name, wins in sorted_leaders[0:5]:
+        print(f"{wins:,} -- {name}")
+    print("---------------------------")
+    print()
+
+
+def load_leaders():
+    directory = os.path.dirname(__file__)
+    filename = os.path.join(directory, 'leaderboard.json')
+
+    if not os.path.exists(filename):
+        return {}
+
+    with open(filename, 'r', encoding='utf-8') as fin:
+        return json.load(fin)
+
+
+def record_win(winner_name):
+    leaders = load_leaders()
+
+    if winner_name in leaders:
+        leaders[winner_name] += 1
+    else:
+        leaders[winner_name] = 1
+
+    directory = os.path.dirname(__file__)
+    filename = os.path.join(directory, 'leaderboard.json')
+
+    with open(filename, 'w', encoding='utf-8') as fout:
+        json.dump(leaders, fout)
 
 
 if __name__ == '__main__':
