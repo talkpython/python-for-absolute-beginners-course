@@ -1,8 +1,10 @@
 import datetime
+import platform
 import random
 import json
 import os
 
+import colorama
 from colorama import Fore
 
 rolls = {}
@@ -10,6 +12,10 @@ rolls = {}
 
 def main():
     try:
+        # See comment at top of the rpsgame.py in CHAPTER 10.
+        if platform.system() == 'Windows':
+            colorama.init(convert=True)
+
         print(Fore.WHITE)
         log("App starting up...")
 

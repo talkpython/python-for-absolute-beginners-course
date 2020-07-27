@@ -1,8 +1,21 @@
+#################################
+#
+# NOTE TO WINDOWS USERS: Please see the following github issue
+# if you find weird characters instead color from colorama:
+#
+#  https://github.com/talkpython/python-for-absolute-beginners-course/issues/7
+#
+# Apparently, even though it's supposed to adjust automatically, it doesn't always.
+# We've added a test to force it to do so at the beginning of main().
+#
+
 import datetime
 import random
 import json
 import os
+import platform
 
+import colorama
 from colorama import Fore
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import WordCompleter, Completer, Completion
@@ -11,6 +24,10 @@ rolls = {}
 
 
 def main():
+    # See comment at top of file.
+    if platform.system() == 'Windows':
+        colorama.init(convert=True)
+
     print(Fore.WHITE)
     log("App starting up...")
 
