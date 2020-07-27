@@ -4,7 +4,7 @@ from typing import List, Optional
 
 def main():
     print()
-    print("Welcome to TIC TAC TOE from TALK PYTHON")
+    print("Welcome to Connect 4 from TALK PYTHON")
     print()
 
     # CREATE THE BOARD:
