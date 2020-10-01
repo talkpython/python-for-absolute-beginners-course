@@ -73,6 +73,27 @@ Then we can test whether a number is even if it is evenly divisible by 2 or has 
 remainder = num % 2  # Is this 0 or 1?
 ```
 
+### How let the user enter multiple inputs ?
+
+create a new .py file and enter below code. below code is for reference, you can try below code with any problem you want to solve that gives multiple entering 
+inputs ability to the user. 
+
+def sampleMP():
+    n = int(input(Enter number of input : )) # asking the user how much inputs they want to enter, each line contain one input  
+    allInput = []
+	count =0         # Initialise the counter to keep track of inputs user entering
+	while True:
+	    if count == n:   # if count become equal to n then break
+		    break
+		else:               # else continue asking input from user
+		    ip = int(input())
+			allInput.aapend(ip)
+	print(allInput)  
+
+
+# Practice above concept of taking inputs from user with problem like matrix_multiplication(matrix can be 2X2, 3X3, 3x2), then you will understand the power of the
+concept.
+
 
 ## Exercises
 
