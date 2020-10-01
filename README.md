@@ -8,8 +8,16 @@ Code samples and other handouts for our course. See the [**practice exercises**]
 
 ## Course Summary
 
+The python language is one of the most accessible programming languages available because it has simplified syntax and not complicated, 
+which gives more emphasis on natural language. 
+Due to its ease of learning and usage, python codes can be easily written and executed much faster than other programming language
+Python is a general purpose and high level programming language. You can use Python for developing desktop GUI applications, websites, designing ML and AI algorithms.
+
 Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
 
+This course design in such a way one can learn while contributing in real-time like projects which make the learning even faster. 
+
+So what you are waiting for let's get started now and change the world with the power of programming language.
 
 
 ## What students are saying
