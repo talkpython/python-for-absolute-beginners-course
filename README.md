@@ -8,7 +8,7 @@ Code samples and other handouts for our course. See the [**practice exercises**]
 
 ## Course Summary
 
-Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
+Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not like most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
 
 
 
@@ -27,7 +27,7 @@ familiar with programming concepts such as data types, loops, functions,
 and so on and that you just need to learn the details of how to do this in 
 Python.
 
-**This course is not most courses**. If you want ground up coverage of 
+**This course is not like most courses**. If you want ground up coverage of 
 software development using Python as the technology, this is your course!
 
 We spend significant time setting the stage to make sure you have 
