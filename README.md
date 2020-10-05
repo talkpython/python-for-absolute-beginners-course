@@ -14,9 +14,7 @@ Learning to program can be overwhelming. Concepts and facts come at you fast and
 
 ## What students are saying
 
-Python for Beginners was really well done, I have CodeAcademy and LinkedIn Learning (not bad mouthing them) but until I had your program I was really struggling. Course curriculum is very good. Thanks for putting this together. 
-
-
+Python for Beginners was well made, I have CodeAcademy and LinkedIn Learning (not bad-mouthing them) but until I had your program I was struggling. The course curriculum is very good. Thanks for putting this together. 
 
 ## What's this course about and how is it different?
 
@@ -27,18 +25,15 @@ familiar with programming concepts such as data types, loops, functions,
 and so on and that you just need to learn the details of how to do this in 
 Python.
 
-**This course is not most courses**. If you want ground up coverage of 
+
+**This course is not most courses**. If you want ground-up coverage of 
 software development using Python as the technology, this is your course!
 
-We spend significant time setting the stage to make sure you have 
-the big concepts clearly covered before diving into writing code. We
-explicitly discuss how to approach problem solving when writing code
-so that you don't have that *deer in the headlines* feeling.
+We spend significant time setting the stage to make sure you have the big concepts covered before diving into writing code. We
+explicitly discuss how to approach problem-solving when writing code so that you don't have that *deer in the headlines* feeling.
  
-And the course content isn't just facts. You will see a lot of code 
-written before your eyes. That code isn't boring `foo()` this and
-`bar()` that. **We build several fun and challenging games covering a wide
-range of topics** that will be entirely relevant to your professional
+ And the course content isn't just facts. You will see a lot of code written before your eyes. That code isn't boring `foo()` this and
+`bar()` that. **We build many fun and challenging games covering a wide range of topics** that will be entirely relevant to your professional
 projects.
 
 If you never had that formal computer science background but need to
@@ -57,10 +52,10 @@ In this course, you will:
 * Create interactive code that has a *conversation* with the user or data.
 * Use functions to make your code more maintainable and reusable.
 * Choose the right data structure to significantly improve the clarity and performance of your code.
-* Create a basic AI / computer opponent for the games built during the course.
-* Learn many problem solving techniques to help you dive right into writing code productively.
+* Create a basic AI/computer opponent for the games built during the course.
+* Learn many problem-solving techniques to help you dive right into writing code productively.
 * See resources to help visualize connections between data created by your code.
-* Work with multiple file formats to read and write data as our program runs.
+* Work with multiple file-formats to read and write data as our program runs.
 * Use external libraries from [pypi.org](https://pypi.org).
 * Add error handling to your application for a polished, reliable application.
 * And lots more
@@ -79,7 +74,7 @@ The student requirements are quite light for this course. You'll need:
 * Basic typing skills
 * Foundational computer experience (installing software etc.) 
 * A simple computer (macOS, Windows, or Linux)
-* A desire to learn programming
+*  A desire to learn to program
 
 **Note**: All software used during this course, including editors, Python language, etc., are 100% free and open source. You won't have to buy anything to take the course.
 
@@ -100,7 +95,8 @@ Python course would cover.
 
 ## The time to act is now
 
-If you've always wanted to learn programming and are considering Python as your gateway into that world, this is the course for you. We will fill in the concepts that would normally be covered in a CS 101 course without wasting your time taking semesters to cover what can be learned and practiced in a week or two.
+
+If you've always wanted to learn to program and are considering Python as your gateway into that world, this is the course for you. We will fill in the concepts that would normally be covered in a CS 101 course without wasting your time taking semesters to cover what can be learned and practiced in a week or two
 
 Dive into Python and become a software developer with this course. Join today! You've got nothing to lose. Every one of our courses comes with a 2-week money-back guarantee.
 
