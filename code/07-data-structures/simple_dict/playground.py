@@ -2,6 +2,7 @@
 # 1. Dictionaries
 # 2. Lists / arrays [1,1,7,11]
 # 3. Sets
+# 4. Tuples
 
 # Lists
 lst = [1, 1, 11, 7]
@@ -12,12 +13,16 @@ lst.remove(11)
 print(lst)
 lst.sort()
 print(lst)
+lst.pop()
+print(lst)
 
 # Sets:
 st = {1, 1, 11, 7}
 st.add(1)
 st.add(1)
 st.add(11)
+print(st)
+st.remove(1)
 print(st)
 
 # Dictionaries
@@ -36,4 +41,12 @@ d['michael'] = 7
 print(d)
 print(f"You are defeated by {d['defeated_by']}")
 print(d.get('other', 42))
+print(d.keys())
+print(d.values())
+      
+# Tuples
+tup1 = (1,1,11,17)
+print(tup1)
+      
+      
 
