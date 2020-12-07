@@ -91,7 +91,7 @@ def get_roll(player_name, roll_names):
     text = input(f"{player_name}, what is your roll? ")
     selected_index = int(text) - 1
 
-    if selected_index < 0 or selected_index >= len(rolls):
+    if selected_index < 0 or selected_index >= len(roll_names):
         print(f"Sorry {player_name}, {text} is out of bounds!")
         return None
 
