@@ -55,8 +55,8 @@ Data is converted to numerical types using the type name (int, float, etc). Here
 
 ```python
 text = '7.2'
-whole_number = int(text)   # value = 7
 number       = float(text) # value = 7.2
+whole_number = int(number) # value = 7
 ```
 
 ## Exercises
