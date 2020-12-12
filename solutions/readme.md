@@ -1,15 +1,17 @@
-# Solutions: Proceed with caution.
+# 해결책 :주의해서 진행하십시오.
 
-We've decided to include the solutions to the practice exercises. Initially, the intention was to omit them. It can be frustrating. However, **it's working your way through that actually drives the learning**. It feels good to see the solution, but to make it really click, you have to make it your own and work your way through it.
+연습 문제에 대한 솔루션을 포함하기로 결정했습니다. 처음에는이를 생략하려는 의도였습니다. 실망 스러울 수 있습니다. 그러나 **실제로 학습을 주도하는 방식으로 작동합니다** . 해결책을 보는 것은 기분이 좋지만, 실제로 클릭하게하려면 자신 만의 방식으로 만들고 해결해야합니다.
 
-That said, a large number of students have requested that I add these and so here they are.
+즉, 많은 학생들이 제가 이것을 추가하도록 요청했으며 여기에 있습니다.
 
-But, I want to you be sure you want to go down this path. Ideally, this is a *check my solution* type of thing. So we have made the steps a little bit manual. To see the solution, you have to check out the `with_solutions` branch. They do no appear in the default `master` branch (this one). 
+그러나 나는 여러분들이 이 길을 가고 싶다는 것을 확실히하고 싶습니다. 이상적으로 이것은 *내 솔루션 유형을 확인* 하는 것입니다. 그래서 우리는 단계를 약간 수동으로 만들었습니다. 해결책을 보려면 `with_solutions`브랜치를 확인해야합니다 . 기본 `master`브랜치 (이 브랜치) 에는 나타나지 않습니다 .
 
-You can do this on GitHub by just using the branch dropdown like this:
+다음과 같이 분기 드롭 다운을 사용하여 GitHub에서이 작업을 수행 할 수 있습니다.
+
 
 ![](./resources/branches.png)
 
-Then you will see a solutions folder below this one.
+그러면 이 폴더 아래에 솔루션 폴더가 표시됩니다.
 
-Best of luck on the course, Michael!
+
+행운을 빕니다, 마이클!

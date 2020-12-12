@@ -1,107 +1,104 @@
-# Python for Absolute Beginners Course
+# 초보자를 위한 파이썬 코스
 
 ![](readme_resources/absolute-beginners.jpg)
 
-Code samples and other handouts for our course. See the [**practice exercises**](/practices) for following along with the course.
+이 과정에 관한 코드 샘플과 유인물. 이 과정을 따라가려면 [**practice exercises**](/practices) 를 참조하세요.
 
 
 
-## Course Summary
+## 코스 요약
 
-Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
-
-
-
-## What students are saying
-
-Python for Beginners was really well done, I have CodeAcademy and LinkedIn Learning (not bad mouthing them) but until I had your program I was really struggling. Course curriculum is very good. Thanks for putting this together. 
+프로그래밍을 배우는 것은 압도될 수 있습니다. 개념과 사실은 빠르게 전달되며 대부분의 과정은 그 중 많은 부분을 전혀 다루지 않거나 초보자 속도로 다루지 않습니다. **대부분의 과정이 아닙니다** 초보자를 위한 파이썬은 초보 개발자를 위한 최고의 과정입니다. CS 101 과정에서 다루는 큰 아이디어와 개념을 가르치면서 처음부터 시작합니다. 그런 다음 점점 더 복잡한 코드와 애플리케이션을 파이썬으로 작성합니다.
 
 
+## 학생들이 말하는 것
 
-## What's this course about and how is it different?
+초보자를위한 파이썬은 정말 잘 해냈고, 저는 CodeAcademy와 LinkedIn Learning을 가지고 있습니다 (나쁜 말이 아닙니다).하지만 당신의 프로그램을 만들기 전까지는 정말 힘들었습니다. 커리큘럼이 매우 좋습니다. 함께 해주셔서 감사합니다.
 
-Most courses teach you the *facts* of programming and Python. Here is
-how a loop is constructed. Here is how you test a condition and make
-your program choose one path or another. Often they assume that you are
-familiar with programming concepts such as data types, loops, functions, 
-and so on and that you just need to learn the details of how to do this in 
-Python.
 
-**This course is not most courses**. If you want ground up coverage of 
-software development using Python as the technology, this is your course!
+## 이 과정은 무엇이며 어떻게 다른가요?
 
-We spend significant time setting the stage to make sure you have 
-the big concepts clearly covered before diving into writing code. We
-explicitly discuss how to approach problem solving when writing code
-so that you don't have that *deer in the headlines* feeling.
+대부분의 코스는 프로그래밍과 파이썬의 *사실*을 가르쳐줍니다. 
+여기 루프를 만드는 방법이 있습니다. 
+여기 조건을 테스트하여 프로그램이 어떤 경로를 선택하게 하는 방법이 있습니다.
+그들은 종종 당신이 데이터 타입, 루프, 함수 등과 같은 프로그래밍 개념에 익숙하고 파이썬에서 그것들을 어떻게 하는지에 대한 세부사항만 배우면 된다고 가정합니다.
+
+
+**이 과정은 그 대부분의 코스와는 다릅니다**. 
+만약 당신이 파이썬을 사용하여 소프트웨어 개발의 기초를 다지고 싶다면, 이 코스가 당신의 코스입니다!
+
+우리는 여러분이 코드를 쓰기 전에 큰 개념을 명확하게 다룰 수 있도록 무대를 만드는데 많은 시간을 할애합니다.
+우리는 코드를 작성할 때 문제 해결에 접근하는 방법을 명확하게 논의하여 당신이 *헤드라인에서 삭제* 느낌을 갖지 않도록 합니다.
  
-And the course content isn't just facts. You will see a lot of code 
-written before your eyes. That code isn't boring `foo()` this and
-`bar()` that. **We build several fun and challenging games covering a wide
-range of topics** that will be entirely relevant to your professional
-projects.
+그리고 코스의 내용은 단순한 사실이 아닙니다. 
+여러분은 눈앞에 많은 코드가 쓰여 있는 것을 보게 될 것입니다. 
+이 코드는`foo()` 와 `bar()` 가 지루하지 않습니다. 
+**우리는 다양한 주제를 다루고 재미있고 도전적인 게임을 몇 개 만듭니다.** 
+그것은 여러분의 전문 프로젝트와 전적으로 관련이 있을 것입니다.
 
-If you never had that formal computer science background but need to
-jump into programming and Python, this course has your back.
-
-
-
-## What topics are covered
-
-In this course, you will:
-
-* Learn how to install Python and a proper editor to write code on your computer.
-* See a quick, high-level overview of the *big ideas* of computer programming (e.g. data structures).
-* Understand how Python executes a program and turns what you write into executable software.
-* See how Python defines data types (integers, strings, etc.) and how to convert between them.
-* Create interactive code that has a *conversation* with the user or data.
-* Use functions to make your code more maintainable and reusable.
-* Choose the right data structure to significantly improve the clarity and performance of your code.
-* Create a basic AI / computer opponent for the games built during the course.
-* Learn many problem solving techniques to help you dive right into writing code productively.
-* See resources to help visualize connections between data created by your code.
-* Work with multiple file formats to read and write data as our program runs.
-* Use external libraries from [pypi.org](https://pypi.org).
-* Add error handling to your application for a polished, reliable application.
-* And lots more
-
-View the full [course outline](https://training.talkpython.fm/courses/explore_beginners/python-for-absolute-beginners#course_outline).
+만약 여러분이 공식적인 컴퓨터 과학 경력이 없지만 프로그래밍과 파이썬에 뛰어들 필요가 있다면, 이 코스는 당신에게 기반이 될 것입니다..
 
 
 
+## 다루는 주제
 
-## Who is this course for?
+이 과정에서 여러분이 수행할 것:
 
-This course is for **anyone who wants to learn Python and computer programming**. If you haven't had a formal education in software development or have tried other courses and programming "didn't stick", then you are a great candidate student.
+* 파이썬을 설치하는 방법과 컴퓨터에 코드를 쓸 수 있는 적절한 편집기를 배우기
+* 컴퓨터 프로그래밍(예: 데이터 구조)의 *빅 아이디어* 에 대한 간략한 개요를 참조하세요.
+* 파이썬이 프로그램을 실행하고 작성한 내용을 실행 가능한 소프트웨어로 변환하는 방법을 이해하십시오.
+* 파이썬이 데이터 타입 (정수, 문자열 등)을 정의하는 방법과 데이터 타입간에 변환하는 방법을 확인하십시오.
+* 사용자 또는 데이터와의 *전환* 이 있는 대화형 코드를 만드십시오.
+* 코드를 유지관리하고 재사용할 수 있도록 함수를 사용하십시오.
+* 코드의 명확성과 성능을 크게 향상시키려면 적절한 데이터 구조를 선택하십시오.
+* 이 코스동안 구축된 게임에 대한 기본적인 AI / 컴퓨터 적수를 만드십시오.
+* 코드를 생산적으로 작성하는 데 도움이 되는 많은 문제 해결 기술을 배우십시오.
+* 코드로 생성된 데이터 간의 연결을 시각화하는 데 도움이 되는 리소스를 참조하십시오.
+* 프로그램이 실행되는 동안 여러 파일 형식을 사용하여 데이터를 읽고 쓰십시오.
+* [pypi.org](https://pypi.org)의 외부 라이브러리를 사용하십시오.
+* 세련되고 신뢰할 수 있는 응용프로그램을 위해 응용프로그램에 오류 처리 추가하십시오.
+* 그리고 더 많은 것
 
-The student requirements are quite light for this course. You'll need:
-
-* Basic typing skills
-* Foundational computer experience (installing software etc.) 
-* A simple computer (macOS, Windows, or Linux)
-* A desire to learn programming
-
-**Note**: All software used during this course, including editors, Python language, etc., are 100% free and open source. You won't have to buy anything to take the course.
+전체 [course outline](https://training.talkpython.fm/courses/explore_beginners/python-for-absolute-beginners#course_outline) 보기.
 
 
 
 
-## What games will we build?
+## 이 코스는 누구를 위한 코스인가?
 
-I believe it's important to learn programming in the context of something that feels plausible and real. We won't build a bunch of disconnected loops and other programming examples that don't relate back to real programs. We  will build several fun games that cover meaningful content that any elementary 
-Python course would cover.
+본 코스는 **파이썬과 컴퓨터 프로그래밍을 배우고 싶은 누구든지를 위한** 코스입니다. 소프트웨어 개발에 대한 정식 교육을 받지 않았거나 다른 코스를 시도해보거나 프로그래밍이 고착되지 않았다면, 여러분은 훌륭한 지원 학생입니다.
 
-1. **Guess the number of M&Ms in a jar**
-2. **TIC-TAC-TOE**
-3. **Rock-Paper-Scissors (3-way and 7-way)**
-4. **A Connect4 clone**
+이 코스를 위한 학생 필요 요건은 아주 별 것 없습니다. 필요한 항목:
+
+* 기본 타이핑 기술
+* 기본 컴퓨터 경험(소프트웨어 설치 등)
+* 간단한 컴퓨터 (맥OS, 윈도우, 또는 리눅스)
+* 프로그래밍을 배우고 싶은 열망
+
+
+**주의**: 편집자, 파이썬 언어 등을 포함하여 이 코스 동안 사용되는 소프트웨어는 100% 무료 및 오픈 소스, 그 강좌를 수강하기 위해 아무것도 사지 않아도 될 것입니다.
 
 
 
-## The time to act is now
+## 어떤 게임을 만들까?
 
-If you've always wanted to learn programming and are considering Python as your gateway into that world, this is the course for you. We will fill in the concepts that would normally be covered in a CS 101 course without wasting your time taking semesters to cover what can be learned and practiced in a week or two.
+그럴듯하고 현실적이라고 느끼는 어떤 것의 맥락에서 프로그래밍을 배우는 것이 중요하다고 믿습니다.
+우리는 실제 프로그램과 관련 없는 단절된 루프와 다른 프로그래밍 예시들을 만들지 않을 것이다.
+우리는 어떤 초급 파이톤 코스라도 다룰 의미 있는 콘텐츠를 다루는 재미있는 게임을 몇 개 만들 것입니다.
 
-Dive into Python and become a software developer with this course. Join today! You've got nothing to lose. Every one of our courses comes with a 2-week money-back guarantee.
+1. **항아리에 있는 M&M의 개수를 추측하십시오**
+2. ** tic tac toe **
+3. **가위바위보(3명 과 7명**
+4. **연결4 복제**
 
-Visit the [**course page to sign up**](https://training.talkpython.fm/courses/explore_beginners/python-for-absolute-beginners).
+
+
+## 지금이 행동할 때입니다.
+
+프로그래밍을 배우고 싶었고 파이썬을 그 세계로 들어가는 관문으로 생각하고 있다면, 이것이 당신을 위한 코스입니다.
+우리는 보통 CS 101 코스로 학습하고 연습할 수 있는 것을 일주일이나 2주 안에 다루기 위해 학기를 수강하는 시간을 낭비하지 않고 그 개념을 채울 것입니다.
+
+파이썬에 들어가서 이 코스를 통해 소프트웨어 개발자가 되십시오.
+지금 바로 참여하십시오!
+여러분은 잃을 게 없습니다. 모든 코스는 2주간의 환불 보증을 제공합니다.
+여기 [**course page to sign up**](https://training.talkpython.fm/courses/explore_beginners/python-for-absolute-beginners)방문하십시오.

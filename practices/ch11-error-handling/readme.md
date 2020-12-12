@@ -1,18 +1,19 @@
-# Practice Exercises for error handling
+# 오류 처리를 위한 연습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
 ### try / except
 
-When handling errors, we can check for bad values (e.g. `None` where a proper string was expected). But Python's native error handling approach is exception-based: throwing and catching exceptions.
+오류를 처리 할 때 잘못된 값을 확인할 수 있습니다. (예: `None` 적절한 문자열이 예상되는 위치) 그러나 Python의 기본 오류 처리 접근 방식은 예외 기반입니다. 예외 발생 및 잡기.
 
-Below is the minimum code to catch an error in Python.
+다음은 Python에서 오류를 포착하기위한 최소 코드입니다.
+
 
 ```python
 try:
@@ -20,14 +21,15 @@ try:
     do_risky_thing2()
     do_risky_thing3()
 except Exception as x:
-    # Deal with error, use x for help on what happened.
+    # 무슨 일이 있었는지 도움받기 위해 x를 사용하여 오류를 처리하십시오.
 ```
 
-###  Multiple error types
+###  여러 오류 유형
 
-The example above is good to catch errors. But it catches them all (well, almost all of them), and it treats them all the same. 
+위의 예는 오류를 포착하는 데 좋습니다. 그러나 그것은 그것들을 모두 (거의 모두) 포착하고, 그것들을 모두 동일하게 취급합니다.
 
-Below is code needed to handle different errors as well as unforeseen errors.
+다음은 다양한 오류와 예기치 않은 오류를 처리하는데 필요한 코드입니다.
+
 
 ```python
 try:
@@ -44,11 +46,11 @@ except Exception as x:
     # Deal with error, use x for help on what happened.
 ```
 
-**Note**: It is important that the most specific errors are listed first and the most general the last (`Exception`). Python selects the first (not best) match.
+**주의**: 가장 구체적인 오류가 먼저 나열되고 가장 일반적인 오류가 마지막 ( Exception)에 나열되는 것이 중요합니다 . 파이썬은 첫 번째 (최선이 아닌) 일치를 선택합니다.
 
-## Exercises
+## 연습
 
-Now it's your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
+이제 여러분 차례입니다.  이 연습에서는 문제 해결에 관한 장에서 만든 tic tac toe 게임으로 돌아갑니다. 또는 Connect 4를 통해 만든 경우 대신 해당 작업을 수행 할 수 있습니다. 당신이 할 일은 다음과 같습니다:
 
-* Add error handling around the input processing in your program using try / except. Be as specific on the errors as possible. If you can determine the cause or type of error, give a specific message.
-* Think of all other ways your app could crash or run into trouble. Get it to crash, check the error type in the traceback, and add the appropriate error handling for this as well.
+* try / except를 사용하여 프로그램의 입력 처리 주위에 오류 처리를 추가하십시오. 가능한 한 오류를 구체적으로 설명하십시오. 오류의 원인이나 유형을 확인할 수 있으면 특정 메시지를 제공하십시오.
+* 앱이 충돌하거나 문제가 발생할 수있는 다른 모든 방법을 생각해보십시오. 충돌을 일으키고 트레이스 백에서 오류 유형을 확인하고 이에 대한 적절한 오류 처리를 추가하십시오.
