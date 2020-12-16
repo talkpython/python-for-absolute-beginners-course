@@ -1,33 +1,33 @@
-# Practice exercises for data structures
+# 데이터 구조에 대한 연습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
-### Creating a static dictionary
+### 정적 사전 만들기
 
-You can create a dictionary a number of ways. How you do this depends on how much data is static and how much is dynamic as part of the program's execution.
+여러분은 여러 가지 방법으로 사전을 만들 수 있습니다. 이 작업을 수행하는 방법은 프로그램 실행의 일부로서 정적 데이터 양과 동적 데이터 양에 따라 달라집니다.
 
 ```python
-# Static data styles:
+# 정적 데이터 스타일:
 
-# empty dictionary
+# 빈 사전
 names = {}
 
-# A dictionary with players start at zero score
+# 플레이어가 0점에서 시작하는 사전
 two_names = {'player1': 0, 'player2': 0} 
 
-# This is the same as before
+# 이것은 이전과 동일합니다.
 two_names = dict(player1=0, player2=0) 
 ```
 
-### Creating a dynamic dictionary
+### 동적 사전 만들기
 
-If you have dynamic data, this requires something else to build them:
+동적 데이터가 있는 경우 동적 데이터를 작성하려면 다른 작업이 필요합니다:
 
 ```python
 names = get_list_of_names()
@@ -35,34 +35,34 @@ scores = {}
 for n in names:
      scores[n] = 0
      
-# We can condense this using a dictionary comprehension. 
-# Same as above:
+# 사전 이해력을 사용하여 이것을 압축할 수 있습니다.
+# 위와 같음:
 names = get_list_of_names()
 scores = {n: 0 for n in names} 
 ```
 
-### Reading values from a dictionary
+### 사전에서 값 읽기
 
 ```python
-# Access a *known* value in the dictionary:
+# 사전에 있는 *알려진* 값에 액세스합니다.:
 p1_score = scores['player1']
 
-# Access a score, unsure whether player1 is a key, if it isn't there, return 0.
+# 점수에 액세스하고 player1이 키인지 확실하지 않은 경우 0을 반환합니다.
 p1_score = scores.get('player1', 0)
 ```
 
-## Exercises
+## 연습
 
-Now it's your turn. Try this practice below.
+이제 여러분 차례입니다. 아래에서 이 연습을 시도하십시오.
 
-The core idea in this chapter was about dictionaries and data structures in general. Create a simple program that creates a dictionary called `d` such that the following runs without error and prints what is expected:
+이 장의 핵심 아이디어는 전반적으로 사전과 데이터 구조에 관한 것이었습니다. 다음이 오류없이 실행되고 예상되는 내용을 인쇄할 수 있도록 `d` 라는 사전을 만드는 간단한 프로그램을 만드십시오. 
 
 ```python
-# d = create d using core concepts above.
+# d = 위의 핵심 개념을 사용하여 d 생성.
 
-print(d["Sam"])          # outputs 7
-print(d['rolls'])        # outputs ['rock', 'paper', 'scissors']
-print(d.get('Sarah'))    # outputs None
-print(d.get('Jeff', -1)) # outputs -1
-print(d['done'])         # outputs True
+print(d["Sam"])          # 출력 7
+print(d['rolls'])        # 출력 ['rock', 'paper', 'scissors']
+print(d.get('Sarah'))    # 출력 None
+print(d.get('Jeff', -1)) # 출력 -1
+print(d['done'])         # 출력 True
 ```

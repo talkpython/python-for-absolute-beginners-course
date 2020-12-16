@@ -1,36 +1,36 @@
-# Practice Exercises for problem solving
+# 문제해결을 위한 연습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
-### Michael's problem solving techniques
+### 마이클의 문제 해결 기술
 
-Here are a few of the ideas I use to get traction while solving a problem
+여기 내가 문제를 해결하면서 추진력을 얻기 위해 사용하는 몇 가지 아이디어가 있다.
 
-1. Divide and conquer.
-2. Have I seen a similar problem before?
-3. Visualize the data ([pythontutor.com](http://pythontutor.com), debugger, `print()`, etc)
-4. Run through the data structures (will a well known data structure help this problem?).
-5. Is there a [PyPI](https://pypi.org/) package that solves this? Also check [awesome-python](https://awesome-python.com/).
-6. Remember this is **part of the journey**.
-7. **Just start**, you can adjust as you go and learn more.
+1. 분열하여 정복하라
+2. 전에도 비슷한 문제를 본 적이 있는가?
+3. 데이터를 시각화하여라. ([pythontutor.com](http://pythontutor.com), 디버거, `print()`, 등)
+4. 데이터 구조를 조사한다(잘 알려진 데이터 구조가 이 문제에 도움이 될 것인가).
+5. 이 문제를 해결하는 [PyPI](https://pypi.org/) 패키지가 있습니까? 또한 [awesome-python](https://awesome-python.com/) 을 확인하십시오 .
+6. 이것이 **여정의 일부임을**.기억하십시오. 
+7. **시작하기만 하면**, 진행하면서 조정하고 자세히 알아볼 수 있습니다.
 
 
-## Exercises
+## 연습
 
-Now it's your turn. For this round, you get to dive into a similar experience as we had building [**Tic Tac Toe**](https://www.google.com/search?client=firefox-b-1-d&q=Tic+Tac+Toe) in the videos.
+이제 여러분 차례입니다. 이번 라운드에서는 비디오에서  [**Tic Tac Toe**](https://www.google.com/search?client=firefox-b-1-d&q=Tic+Tac+Toe) 를 만들 때와 비슷한 경험을 할 수 있습니다.
 
 ![](readme_files/Connect_4_Board_and_Box.jpg)
 
-You get to build a **Connect 4** clone. Read more about the game **[on Wikipedia](https://en.wikipedia.org/wiki/Connect_Four)** or try a few rounds over at **[this website](https://www.mathsisfun.com/games/connect4.html)**. 
+**Connect 4** 클론을 만들 수 있습니다. **[Wikipedia](https://en.wikipedia.org/wiki/Connect_Four)** 에서 게임에 대해 자세히 읽어 보거나 **[this website](https://www.mathsisfun.com/games/connect4.html)**에서 몇 차례 반복해 보십시오. 
 
-It should be pretty similar to tic tac toe. But the way a player selects a play is just to choose the column and the state of the board determines which row the puck stops in. Also, you do not need an entire row, column, or diagonal to win, just 4 of a given kind in any of these.
+tic tac toe와 꽤 비슷합니다. 그러나 플레이어가 플레이를 선택하는 방법은 열을 선택하는 것이며 보드의 상태에 따라 퍽이 멈추는 행이 결정됩니다. 또한, 당신은 이기기 위해 전체 행, 열 또는 대각선이 필요하지 않습니다. 단지 이것들 중 어느 것에도 주어진 종류의 4개만 필요합니다.
 
-Think about what you saw in the videos (**#2, have I seen a similar solution**), use the right data structure (**#4, Run through the data structures**), and as always, break the problem down to simple parts (**#1, Divide and conquer**).
+비디오에서 본 내용을 생각해 보십시오.(**#2, 유사한 솔루션을 본 적이 있는가**). 올바른 데이터 구조를 사용하십시오. (**#4, 데이터 구조를 통해 실행하십시오**). 그리고 항상 그렇듯이 문제를 단순한 부분으로 나누십시오.(**#1, 분할 및 정복***).
 
-Also, remember that writing this program is involved. Most likely, it won't be super fast to solve (**#6, this is part of the journey**). Now, create a new blank project and start coding (**#7, just start**)!
+또한 이 프로그램을 작성하는 것도 포함된다는 점을 기억하십시오. 대부분의 경우 해결하는 것이 그렇게 빠르지는 않을 것입니다. (**#6, 이것은 여정의 일부입니다.**). 이제 새 빈 프로젝트를 만들고 코딩을 시작하십시오. (**#7, 시작하십시오 **)!

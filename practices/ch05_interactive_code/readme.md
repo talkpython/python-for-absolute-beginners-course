@@ -1,84 +1,84 @@
-# Practice exercises for interactive code
+# 대화형 코드에 대한 실습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
-### Running Python code
+### 파이썬 코드 실행
 
-If you have a Python **file**, it can be executed inside PyCharm by simply right-clicking and choosing **Run**. Outside of PyCharm, you execute it like this:
+파이썬 **file**이 있는 경우, 단순히 오른쪽 버튼을 클릭하고 **Run** 을 선택하면 PyCharm 내부에서 실행할 수 있습니다. PyCharm 외부에서, 다음과 같이 실행하십시오.
 
 ```bash
 $ python3 program.py
 
-# or 
+# 또는
 
 C:\> python program.py 
 ```
 
-Remember to use either `python` or `python3` based on your system setup. 
+시스템 설정에 따라 `python` 또는 `python3` 를 사용하십시오.
 
-### if / else statements
+### if / else 문장
 
-The essential lesson from this chapter is how code makes decisions to do one thing or another. The first building block are simple **this or that** type of processes. These are done with `if` statements.
+이 장으로부터 본질적인 것은 코드가 어떻게 결정을 내려서 이러저러한 일을 하는가에 있습니다. 첫 번째 빌딩 블록은 간단한 **이것이나 저것** 프로세스 유형입니다. 이것들은 `if` 문장으로 수행됩니다.
 
 ```python
 num = 7
 
 if num < 100:
-    print("Number is smallish")
+    print("숫자가 작습니다.")
 ```
 
-We can also have code that has two or more branches with `elif` and `else`:
+우리는 또한 `elif` 과 `else` 같은 두 개 이상의 분기를 가진 코드를 가질 수 있습니다. :
 
 ```python
 num = 7
 
 if num < 100:
-    print("Number is smallish")
+    print("숫자가 작습니다.")
 elif num < 1000:
-    print("Middle sized number.")
+    print("중간 사이즈의 숫자입니다..")
 else:
-    print("That's one big number!")
+    print("숫자가 큽니다!")
 ```
 
-### while loops
+### while 루프
 
-When you need to repeat an operation as long as some condition is met, the `while` loop is the thing you want.
+어떤 조건이 충족되는 한 한 작업을 반복해야 할 때는, `while` 루프가 필요합니다.
 
 ```python
 attempts = 0
 
 while attempts < 5:
     attempts += 1
-    # do whatever you are attempting here...
+    # 여기 여러분이 시도하고 싶은 것을 쓰시면 됩니다....
 ```
 
-### Is a number even or odd?
+### 숫자가 홀수인가 짝수인가?
 
-This seems like a simple question to answer but requires a new operation. The modulo operator. This is basically the remainder of a division. For example, 19 / 5 is 3 as a **whole number** (int). But we know that there is a remainder of 4 for whole number math. In Python we express this as:
+이것은 대답하기 간단한 질문처럼 보이지만 새로운 작전이 필요합니다. 모듈로 연산자. 이것은 기본적으로 나누기의 나머지 부분입니다. 예를 들어, 19 / 5 는 **정수** (int)로서 3입니다. 그러나 우리는 정수 수학에서는 나머지 4가 있다는 것을 압니다. 파이썬에서는 이를 다음과 같이 표현합니다:
 
 ```python
 div = int(19 / 5)  # <-- 3
 rem = 19 % 5       # <-- 4
 ```
 
-Then we can test whether a number is even if it is evenly divisible by 2 or has a remainder of 0:
+그런 다음, 숫자가 2로 균등하게 분할되거나 0의 나머지를 갖는 경우에도 숫자가 동일한지 여부를 검정할 수 있습니다.:
 
 ```python
-remainder = num % 2  # Is this 0 or 1?
+remainder = num % 2  # 0일까 1일까?
 ```
 
 
-## Exercises
+## 연습
 
-Now it's your turn. Here are some ideas to practice. 
+이제 여러분 차례입니다. 여기 연습할 몇가지 문제가 있습니다.
 
-1. Create a **hello_world.py** file and execute it with Python. This can be in PyCharm or in another editor and using the technique above. Seems trivial but will help you verify everything is working right there. Just have the program output "Hello world"
-2. Write a program that requests a number from the user. Have the program print "Even" or "Odd" depending on whether they entered an even or odd number.
-3. Extend the program above to repeatedly ask that question as long as the user enters a nonzero number. But if they enter 0, it should then stop asking and say goodbye.
-4. Take one of these sets of code and visualize them with [pythontutor.com](http://pythontutor.com/visualize.html#mode=edit)
+1. **hello_world.py** 파일을 만들고 파이썬으로 이를 실행하십시오. 이것은 PyCharm 또는 다른 편집기에서 위 기술을 사용할 수 있습니다. 사소해 보이지만 모든 것이 제대로 작동하는지 확인하는 데 도움이 될 것입니다. 프로그램 출력 "Hello world"만 하십시오.
+2. 사용자로부터 숫자를 요청하는 프로그램을 작성하십시오. 짝수를 입력했는지 홀수를 입력했는지 여부에 따라 프로그램에서 "짝수" 또는 "홀수" 를 출력하도록 하십시오.
+3. 위의 프로그램을 확장하여 사용자가 0이 아닌 숫자를 입력하는 한 그 질문을 반복적으로 합니다. 하지만 만약 그들이 0으로 들어간다면, 그것은 질문을 멈추고 작별인사를 해야 합니다.
+4. 이러한 코드 세트 중 하나를 취하여 [pythontutor.com](http://pythontutor.com/visualize.html#mode=edit) 로 시각화합니다.

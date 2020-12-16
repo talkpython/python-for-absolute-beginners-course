@@ -1,61 +1,61 @@
-# Practice Exercises for file I/O
+# 파일 입출력 연습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
-### Determining the full path to a file
+### 파일에 대한 전체 경로 결정
 
-Remember that the file location when loading files like `the_file.txt` depend on the working directory, which your program probably doesn't control. So we need to use the `os` module to work from known locations.
+같은 파일을로드 할 때 파일 위치 `the_file.txt` 는 프로그램이 제어하지 않는 작업 디렉토리에 따라 다릅니다. 따라서 os알려진 위치에서 작업하려면 모듈을 사용해야 합니다 .
 
 ```python
 directory = os.path.dirname(__file__)
 filename = os.path.join(directory, 'the_file.txt')
-# Now filename is a full path
+# 이제 filename은 전체 경로입니다.
 ```
 
-###  Opening a file for reading
+###  읽기 용도로 파일 열기
 
-To open a file we use, well, the `open()` function. But as we saw, we should do this within a `with` block to ensure it's closed and flushed in a timely manner. Note the **r** passed to open for read.
+우리가 사용할 파일을 열기 위해서, `open()` 함수를 사용합니다. 그러나 우리가 본 것처럼 `with` 블록 내에서 이 작업을 수행하여 적시에 닫히고 플러시되도록 해야 합니다. 읽기 용도의 열기 위해 전달된  `with`에 유의하십시오.
 
 ```python
 with open(filename, 'r', encoding='utf-8') as fin:
     # work with fin here
     
-# fin is closed and useless at this point.
+# fin은 닫히고 이 시점에서 쓸모가 없습니다.
 ```
 
-### Writing to a file
+### 파일에 쓰기
 
-Writing to a file is similar to reading, it's just about how you open it. Note the **w** for write and **fout** to tell us that it's an output not input file stream.
+파일에 쓰는 것은 읽는 것과 비슷합니다, 그것은 단지 어떻게 열 것인가에 관한 것입니다. 쓰기용 **w**와 입력 파일 스트림이 아닌 출력 파일 스트림임을 알려주기 위해 **fout**을 기록해 두십시오.
 
 ```python
 with open(filename, 'w', encoding='utf-8') as fout:
-    # work with four here
+    # 여기서개 작업 
 ```
 
-### Using json module with file streams
+### 파일 스트림과 함께 json 모듈 사용
 
-Given a file stream, json can read or write objects to/from the json file format.
+파일 스트림이 주어지면 json은 json 파일 형식에서 객체를 읽거나 쓸 수 있습니다.
+
 
 ```python
 import json
 
-# load the rolls from fin input stream
+# fin 입력 스트림에서 역할을 로드합니다.
 rolls = json.load(fin)
 
-# save the leader dictionary to the fout file stream
+# fout 파일 스트림에 리더 사전을 저장합니다.
 json.dump(leaders, fout)
 ```
 
-## Exercises
+## 연습
 
-Now it's your turn. In this practice, go back to the tic tac toe game we created back in the chapter on problem solving. Alternatively, if you made it through Connect 4, you can work with that one instead. Your job will be to:
-
-* Add a leader board (feel free to use JSON like we did).
-* Add a running log file (test with `tail -n 20 -f FILENAME` on macOS and Linux, just open in PyCharm on Windows and it'll change).
-* For extra credit, you can try to use [LogBook](https://logbook.readthedocs.io/en/stable/) to improve the logging (but it will require a few concepts we haven't covered yet).
+이제 여러분 차례입니다. 이 연습에서는 문제 해결에 관한 장에서 만든tic tac toe 게임으로 돌아갑니다. 또는 Connect 4를 통해 만든 경우 대신 해당 작업을 수행 할 수 있습니다. 당신이 할 일은 다음과 같습니다:
+* 리더 보드를 추가하십시오. (우리가했던 것처럼 JSON을 자유롭게 사용하십시오).
+* 실행중인 로그 파일을 추가합니다. (맥os 와 리눅스에서는 `tail -n 20 -f FILENAME`을 테스트하고 윈도우의 PyCharm에서 열면 변경됩니다.).
+* 추가 크레딧을 받으려면, [LogBook](https://logbook.readthedocs.io/en/stable/)을 사용하여 로깅을 개선할 수 있습니다. (그러나 아직 다루지 않은 몇 가지 개념이 필요합니다.)

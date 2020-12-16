@@ -1,42 +1,42 @@
-# Practice exercises for organizing with functions
+# 함수를 사용하여 구성하기 위한 연습
 
-## Overview
+## 개요
 
-In this section, you'll have a chance to practice the concepts you've learned in the videos. First, review the core concepts covered that you'll need to keep in mind. Then go through the exercises below. 
+이 섹션에서는 동영상에서 배운 개념을 연습할 수 있는 기회가 주어집니다. 먼저, 여러분이 유념해야 할 핵심 개념들을 검토해보십시오. 그런 다음 아래의 연습문제를 보십시오.
 
-Remember, these are for your own benefit. Feel free to skip them if you don't find a particular exercise valuable or you get stuck for too long.
+기억하십시오, 이것들은 여러분의 이익을 위한 것입니다. 만약 여러분이 특정한 연습이 가치가 없다고 발견되거나 너무 오랫동안 걸려있다면, 그것들을 건너뛰어도 좋습니다.
 
-## Core concepts
+## 핵심개념
 
-### Function with parameters (input data)
+### 파라미터와 함수(입력 데이터)
 
-When we have code that we want to reuse or isolate and treat as a single concept (black box), we define functions. Here is a basic function:
+우리가 재사용하거나 격리하여 하나의 개념(블랙박스)으로 취급하고자 하는 코드가 있을 때, 우리는 함수를 정의합니다. 기본 함수는 다음과 같습니다:
 
 ```python
 def say_hello(name):
-    print(f'Nice to meet you {name}') 
+    print(f'만나서 반가워요 {name}') 
 ```
 
-### Function that generates data (return values)
+### 데이터를 생성하는 함수 (리턴값)
 
-Functions can also return values to be used later:
+함수는 또한 나중에 사용할 값을 반환할 수 있습니다.
 
 ```python
 def get_name():
-   name = input("What is your name? ") 
+   name = input("이름이 뭐예요? ") 
    return name 
 ```
 
-We can then use these functions together as follows:
+그러면 다음과 같이 이러한 기능을 함께 사용할 수 있습니다:
 
 ```python
 person = get_name()
 say_hello(person)
 ```
 
-### A main method and running "the program"
+### 주요 매서드 와 "프로그램" 실행
 
-As we saw, it's a good convention to have an overall organizing function that is what the whole program does at the top of the file. I called this main, for example:
+우리가 보았듯이 전체 프로그램이 파일 상단에 하는 전체적인 조직 기능을 갖추는 것이 좋은 습관입니다. 나는 이것을 예를 들면 다음과 같이 불렀습니다:
 
 ```python
 def main():
@@ -45,13 +45,13 @@ def main():
     # ... 
 ```
 
-And you must remember to run this **at the end** of your program to actually make it execute. We added these two lines as the final of the source file:
+그리고 이 프로그램을 실행하기 위해서는 프로그램 **끝에서** 이것을 실행하는 것일 기억해야 합니다. 소스 파일의 마지막으로 다음 두 줄을 추가했습니다.:
 
 ```python
 if __name__ == "__main__":
     main()
 ```
 
-## Exercises
+## 연습
 
-Now it's your turn. Your practice exercise is to **take the M&M guessing game we created back in chapter 5 (interactive code) and clean it up using functions**. Make a copy of the file in this folder called `guessinggame.py`. That's what we started with. There are probably 3-4 functions that you can create to help organize and isolate parts of this application. Use the core concepts above to help. 
+이제 당신 차례입니다. 이번 연습은 **5 장에서 만든 M & M 추측 게임 (대화 형 코드)을 사용하여 정리하는 것**  입니다. 이 폴더에서 `guessinggame.py` 파일의 복사본을 만듭니다. 그것이 우리가 시작한 것입니다. 이 응용 프로그램의 일부를 구성하고 분리하는 데 도움이되는 3-4 개의 함수를 만들 수 있습니다. 위의 핵심 개념을 사용하여 도움을 받으십시오.
