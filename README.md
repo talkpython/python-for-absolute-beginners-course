@@ -8,7 +8,7 @@ Code samples and other handouts for our course. See the [**practice exercises**]
 
 ## Course Summary
 
-Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
+Learning to program can be overwhelming. Concepts and facts come at you fast and most courses don't cover many of them at all or at a beginner's pace. **This is not like most courses**. Python for absolute beginners is our premier course for beginning developers. We start at the very beginning, teaching you the big ideas and concepts covered in a CS 101 course. Then we move on to writing increasingly complex code and applications in Python.
 
 
 
@@ -95,6 +95,7 @@ Python course would cover.
 2. **TIC-TAC-TOE**
 3. **Rock-Paper-Scissors (3-way and 7-way)**
 4. **A Connect4 clone**
+5. **Snake Game**
 
 
 
