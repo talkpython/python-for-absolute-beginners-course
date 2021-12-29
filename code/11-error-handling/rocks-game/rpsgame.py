@@ -16,7 +16,7 @@ def main():
         if platform.system() == 'Windows':
             colorama.init(convert=True)
 
-        print(Fore.WHITE)
+        print(Fore.LIGHTWHITE_EX)
         log("App starting up...")
 
         show_header()
@@ -30,17 +30,17 @@ def main():
         log("Game over.")
     except json.decoder.JSONDecodeError as je:
         print()
-        print(Fore.LIGHTRED_EX + "ERROR: The file rolls.json is invalid JSON." + Fore.WHITE)
-        print(Fore.LIGHTRED_EX + f"ERROR: {je}" + Fore.WHITE)
+        print(Fore.LIGHTRED_EX + "ERROR: The file rolls.json is invalid JSON." + Fore.LIGHTWHITE_EX)
+        print(Fore.LIGHTRED_EX + f"ERROR: {je}" + Fore.LIGHTWHITE_EX)
     except FileNotFoundError as fe:
         print()
-        print(Fore.LIGHTRED_EX + "ERROR: Rolls file not found" + Fore.WHITE)
-        print(Fore.LIGHTRED_EX + f"ERROR: {fe}" + Fore.WHITE)
+        print(Fore.LIGHTRED_EX + "ERROR: Rolls file not found" + Fore.LIGHTWHITE_EX)
+        print(Fore.LIGHTRED_EX + f"ERROR: {fe}" + Fore.LIGHTWHITE_EX)
     except KeyboardInterrupt:
         print()
-        print(Fore.LIGHTCYAN_EX + "You gotta run? Ok, cya next time!" + Fore.WHITE)
+        print(Fore.LIGHTCYAN_EX + "You gotta run? Ok, cya next time!" + Fore.LIGHTWHITE_EX)
     except Exception as x:
-        print(Fore.LIGHTRED_EX + f"Unknown error: {x}" + Fore.WHITE)
+        print(Fore.LIGHTRED_EX + f"Unknown error: {x}" + Fore.LIGHTWHITE_EX)
 
 
 def show_header():
@@ -49,7 +49,7 @@ def show_header():
     print("    Rock Paper Scissors")
     print("   Error Handling Edition")
     print("---------------------------")
-    print(Fore.WHITE)
+    print(Fore.LIGHTWHITE_EX)
 
 
 def show_leaderboard():
@@ -86,13 +86,13 @@ def play_game(player_1, player_2):
 
         if not roll1:
             print(Fore.LIGHTRED_EX + "Try again!")
-            print(Fore.WHITE)
+            print(Fore.LIGHTWHITE_EX)
             continue
 
         log(f"Round: {player_1} roll {roll1} and {player_2} rolls {roll2}")
         print(Fore.YELLOW + f"{player_1} rolls {roll1}")
         print(Fore.LIGHTBLUE_EX + f"{player_2} rolls {roll2}")
-        print(Fore.WHITE)
+        print(Fore.LIGHTWHITE_EX)
 
         winner = check_for_winning_throw(player_1, player_2, roll1, roll2)
 
@@ -103,7 +103,7 @@ def play_game(player_1, player_2):
         else:
             msg = f'{winner} takes the round!'
             fore = Fore.GREEN if winner == player_1 else Fore.LIGHTRED_EX
-            print(fore + msg + Fore.WHITE)
+            print(fore + msg + Fore.LIGHTWHITE_EX)
             log(msg)
             wins[winner] += 1
 
@@ -115,7 +115,7 @@ def play_game(player_1, player_2):
     overall_winner = find_winner(wins, wins.keys())
     fore = Fore.GREEN if overall_winner == player_1 else Fore.LIGHTRED_EX
     msg = f"{overall_winner} wins the game!"
-    print(fore + msg + Fore.WHITE)
+    print(fore + msg + Fore.LIGHTWHITE_EX)
     log(msg)
     record_win(overall_winner)
 
@@ -162,7 +162,7 @@ def get_roll(player_name, roll_names):
 
         return roll_names[selected_index]
     except ValueError as ve:
-        print(Fore.RED + f"Could not convert to integer: {ve}" + Fore.WHITE)
+        print(Fore.RED + f"Could not convert to integer: {ve}" + Fore.LIGHTWHITE_EX)
         return None
 
 
