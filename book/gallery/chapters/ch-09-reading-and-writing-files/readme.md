@@ -69,3 +69,5 @@ Figure 17: [There are many logging frameworks for Python to choose from](figures
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

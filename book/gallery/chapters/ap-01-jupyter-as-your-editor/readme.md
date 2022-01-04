@@ -9,3 +9,5 @@ Figure 2: [Starting the Jupyter server with `jupyter lab` command](figures/1302-
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

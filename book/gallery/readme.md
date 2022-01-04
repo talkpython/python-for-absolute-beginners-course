@@ -15,4 +15,6 @@ This gallery contains all the figures from the Python for the Absolute Beginner 
 - [Chapter 11: Error Handling](chapters/ch-11-error-handling)
 - [Chapter 12: Course Conclusion](chapters/ch-12-course-conclusion)
 - [Appendix 1: Jupyter as Your Editor](chapters/ap-01-jupyter-as-your-editor)
-- [Appendix 2: Discount code for video course](chapters/ap-02-discount-code-for-video-course)
+
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

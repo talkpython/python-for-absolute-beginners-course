@@ -69,3 +69,5 @@ Figure 17: [Code can be downloaded without git (green button then download)](fig
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

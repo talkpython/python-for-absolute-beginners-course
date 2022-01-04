@@ -41,3 +41,5 @@ Figure 10: [You've done hours of practice, it's time to get in the game](figures
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

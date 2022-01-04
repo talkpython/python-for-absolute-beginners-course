@@ -37,3 +37,5 @@ Figure 9: [Practice execises at the course's GitHub repository](figures/0613-pra
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

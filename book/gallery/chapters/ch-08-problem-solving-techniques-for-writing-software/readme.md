@@ -21,3 +21,5 @@ Figure 5: [Libraries that support *web scraping* at PyPI (over 10k)](figures/081
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

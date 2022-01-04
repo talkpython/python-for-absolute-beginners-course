@@ -81,3 +81,5 @@ Figure 20: [Be sure to practice working with external packages](figures/1010-pra
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

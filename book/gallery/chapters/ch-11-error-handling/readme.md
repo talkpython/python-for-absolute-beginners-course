@@ -69,3 +69,5 @@ Figure 17: [Be sure to practice writing error handling code](figures/1107-practi
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

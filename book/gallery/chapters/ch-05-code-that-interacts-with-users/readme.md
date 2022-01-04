@@ -105,3 +105,5 @@ Figure 26: [Course page provides quick access to the GitHub repository](figures/
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

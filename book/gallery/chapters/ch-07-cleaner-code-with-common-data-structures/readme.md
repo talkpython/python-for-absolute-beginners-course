@@ -41,3 +41,5 @@ Figure 10: [Complete this code using data structures in *your turn*](figures/071
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

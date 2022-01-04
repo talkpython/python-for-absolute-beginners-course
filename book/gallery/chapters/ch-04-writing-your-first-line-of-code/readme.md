@@ -81,3 +81,5 @@ Figure 20: [After sorting, both `the_data` and `other_data` are updated](figures
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

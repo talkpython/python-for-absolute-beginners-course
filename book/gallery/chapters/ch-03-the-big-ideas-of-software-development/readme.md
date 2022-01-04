@@ -73,3 +73,5 @@ Figure 18: [The beginners and experts episode on Talk Python To Me](figures/0311
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+

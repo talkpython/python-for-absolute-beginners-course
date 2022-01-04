@@ -65,3 +65,5 @@ Figure 16: [Michael Kennedy: Host @ Talk Python and Python Bytes, Founder Talk P
 
 
 
+**LICENSE**: Images in the figure gallery are copyright and not available for reuse. 
+
