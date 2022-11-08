@@ -10,7 +10,7 @@ Remember, these are for your own benefit. Feel free to skip them if you don't fi
 
 ### Creating a static dictionary
 
-You can create a dictionary a number of ways. How you do this depends on how much data is static and how much is dynamic as part of the program's execution.
+You can create a dictionary in a number of ways. How you do this depends on how much data is static and how much is dynamic as part of the program's execution.
 
 ```python
 # Static data styles:
