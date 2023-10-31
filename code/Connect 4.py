@@ -101,17 +101,8 @@ for count in range(0,41,1):
     for row in arr: print(row)
     print("")
     print("It is ", curcolor,"'s turn now.")
-    if "is the winner" in result:
-        break
+    if "is the winner" in result: break
+if count==42: 
+     print("The game was a probably a draw")
+     print("If you think that the game ended prematurely, then maybe it is because you entered some wrong moves during the game.")
 
-#print(isinstance(col1, col))
-'''
-print(inboard(5,6))
-arr[0][3]= "\u26d4"
-for row in arr: print(row)
-i =int(input("i="))
-j =int(input("j="))
-print(arr[i][j])
-if inboard(i,j) == 1:
-    print("Yessss")
-'''
